@@ -1,0 +1,13 @@
+services:
+  log_system:
+    build: .                        # Build from the Dockerfile in this directory
+    image: log-system-app           # Name the built image
+    container_name: my-log-system   # Name the running container
+    stdin_open: true                # Keep STDIN open (needed for input())
+    tty: true                       # Allocate a terminal (needed for interactive CLI)
+    volumes:
+      - log_system_data:/data       # Persist entries across container restarts
+
+# Named volume — Docker manages this on your machine
+volumes:
+  log_system_data:

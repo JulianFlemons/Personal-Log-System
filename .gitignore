@@ -1,0 +1,6 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local data file (entries live in the Docker volume, not here)
+users_entries.json
